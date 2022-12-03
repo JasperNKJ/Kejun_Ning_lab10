@@ -113,14 +113,16 @@
 	var grade4=document.getElementById('info4').value;
     var grade5=document.getElementById('info5').value;
    
-	var total;
-	var average=0;
+	
 
     var comp1=parseInt(grade1);
     var comp2=parseInt(grade2);
     var comp3=parseInt(grade3);
     var comp4=parseInt(grade4);
     var comp5=parseInt(grade5);
+
+    var total;
+	var average=0;
 
 
     var arry = [comp1,comp2,comp3,comp4,comp5];
@@ -135,7 +137,7 @@
                   }
 
                   
-		total=ave/arr.length;
+		total=average/arry.length;
 
                   
 		total=average/arry.length;
@@ -197,8 +199,11 @@
                   }
                   
         arry.sort();
+        console.log(arry)
         average = average -arry[0];
+        console.log(average)
         total=average/(arry.length-1);
+        console.log(total)
 		document.getElementById("content").innerHTML = "You entered the following information into the form: " + total;
         if(total>=90){
             document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A+";
