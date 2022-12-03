@@ -35,6 +35,8 @@
     </div>
     </div>
     <br>
+
+
     <div class="design">
     <div class="form-group">
         <label for="textInputLabel">Grade2</label>
@@ -50,7 +52,11 @@
         <input type="info3" class="form-control" id="info3" placeholder="Example input" name="textInput">
     </div>
     </div>
+
+
     <br>
+
+
     <div class="design">
     <div class="form-group">
         <label for="textInputLabel">Grade4</label>
@@ -58,7 +64,11 @@
         <input type="info4" class="form-control" id="info4" placeholder="Example input" name="textInput">
     </div>
     </div>
+
+
     <br>
+
+
     <div class="design">
     <div class="form-group">
         <label for="textInputLabel">Grade5</label>
@@ -66,7 +76,11 @@
         <input type="info5" class="form-control" id="info5" placeholder="Example input" name="textInput">
     </div>
     </div>
+
+
     <br>
+
+
     <button type="button" class="btn btn-success" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="adjusted()">Calculate Adjusted GPA</button>
     <button type="button" class="btn btn-secondary" type="button" onclick="resetform()">Reset</button>
     <button type="button" class="btn btn-primary" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="calGPA()">Calculate GPA</button>
@@ -98,13 +112,15 @@
 	var grade3=document.getElementById('info3').value;
 	var grade4=document.getElementById('info4').value;
     var grade5=document.getElementById('info5').value;
+   
+	var total;
+	var average=0;
+
     var comp1=parseInt(grade1);
     var comp2=parseInt(grade2);
     var comp3=parseInt(grade3);
     var comp4=parseInt(grade4);
     var comp5=parseInt(grade5);
-	var total;
-	var average=0;
 
 
     var arry = [comp1,comp2,comp3,comp4,comp5];
@@ -126,27 +142,27 @@
 
 		document.getElementById("content").innerHTML = "You entered the following information into the form: " + total;
         if(total>=90){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A+";
         }else if(total<=89 && total>=85){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A";
         }else if(total<=84 && total>=80){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A-";
         }else if(total<=79 && total>=76){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B+";
         }else if(total<=75 && total>=72){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B";
         }else if(total<=71 && total>=68){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B-";
         }else if(total<=67 && total>=64){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C+";
         }else if(total<=63 && total>=60){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C";
         }else if(total<=59 && total>=55){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C-";
         }else if(total<=54 && total>=50){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: D";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: D";
         }else{
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: F";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: F";
         }
 	}
  
@@ -157,13 +173,17 @@
 	var grade3=document.getElementById('info3').value;
 	var grade4=document.getElementById('info4').value;
     var grade5=document.getElementById('info5').value;
+    
+	var total;
+	var average=0;
+
     var comp1=parseInt(grade1);
     var comp2=parseInt(grade2);
     var comp3=parseInt(grade3);
     var comp4=parseInt(grade4);
     var comp5=parseInt(grade5);
-	var total;
-	var average=0;
+
+
     var arry = [comp1,comp2,comp3,comp4,comp5];
    
 
@@ -181,27 +201,27 @@
         total=average/(arry.length-1);
 		document.getElementById("content").innerHTML = "You entered the following information into the form: " + total;
         if(total>=90){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A+";
         }else if(total<=89 && total>=85){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A";
         }else if(total<=84 && total>=80){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: A-";
         }else if(total<=79 && total>=76){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B+";
         }else if(total<=75 && total>=72){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B";
         }else if(total<=71 && total>=68){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: B-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: B-";
         }else if(total<=67 && total>=64){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C+";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C+";
         }else if(total<=63 && total>=60){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C";
         }else if(total<=59 && total>=55){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: C-";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: C-";
         }else if(total<=54 && total>=50){
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: D";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: D";
         }else{
-            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: F";
+            document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" + "<br>" +"Based on this overall score, your letter grade will be: F";
         }
 	}
 
